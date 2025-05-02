@@ -1,11 +1,17 @@
-# Last updated: 5/2/2025, 1:02:27 PM
+# Last updated: 5/2/2025, 1:17:37 PM
 class Solution(object):
     def isPalindrome(self, x):
-        bro=str(x)
-        return bro==bro[::-1]
         """
         :type x: int
         :rtype: bool
         """
+        reversed =0
+        original =x
+        while x>0:
+            last_digit = x%10
+            reversed = reversed*10 + last_digit
+            x = x//10
+        return reversed==original
+
     
         
